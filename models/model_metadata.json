@@ -1,0 +1,79 @@
+{
+  "model_name": "HistGradientBoostingRegressor",
+  "version": "1.0.0",
+  "created_at_utc": "2026-10-09T14:46:56.791773+00:00",
+  "target_variable": "num_orders",
+  "target_units": "weekly_orders",
+  "feature_names": [
+    "checkout_price",
+    "base_price",
+    "discount_amount",
+    "discount_ratio",
+    "price_ratio",
+    "op_area",
+    "week_sin",
+    "week_cos",
+    "week_of_year",
+    "quarter",
+    "center_type",
+    "category",
+    "cuisine",
+    "city_code",
+    "region_code",
+    "emailer_for_promotion",
+    "homepage_featured",
+    "has_any_promotion",
+    "dual_promotion"
+  ],
+  "expected_input_schema": {
+    "required_columns": [
+      "week",
+      "center_id",
+      "meal_id",
+      "checkout_price",
+      "base_price",
+      "emailer_for_promotion",
+      "homepage_featured"
+    ],
+    "optional_enrichment_columns": [
+      "city_code",
+      "region_code",
+      "center_type",
+      "op_area",
+      "category",
+      "cuisine"
+    ]
+  },
+  "hyperparameters": {
+    "max_iter": 200,
+    "learning_rate": 0.08,
+    "max_depth": 12,
+    "min_samples_leaf": 25,
+    "l2_regularization": 0.5,
+    "random_state": 42
+  },
+  "test_metrics": {
+    "mae": 93.57,
+    "rmse": 156.18,
+    "r2": 0.6812,
+    "medae": 53.23,
+    "wape": 41.16
+  },
+  "split_summary": {
+    "strategy": "chronological",
+    "train_rows": 390907,
+    "val_rows": 32820,
+    "test_rows": 32821,
+    "train_weeks": "1 to 125",
+    "val_weeks": "126 to 135",
+    "test_weeks": "136 to 145"
+  },
+  "environment_packages": {
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6",
+    "joblib": "1.6.0",
+    "pydantic": "2.14.0"
+  },
+  "security_notice": "Load only from trusted internal repository sources."
+}

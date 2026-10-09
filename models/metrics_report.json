@@ -1,0 +1,204 @@
+{
+  "timestamp_utc": "2026-10-09T14:46:56.847019+00:00",
+  "baseline": {
+    "val": {
+      "mae": 111.44,
+      "rmse": 322.29,
+      "r2": 0.4139,
+      "medae": 42.0,
+      "wape": 42.32
+    },
+    "test": {
+      "mae": 82.19,
+      "rmse": 143.46,
+      "r2": 0.731,
+      "medae": 42.0,
+      "wape": 36.16
+    }
+  },
+  "candidate_hist_gradient_boosting": {
+    "val": {
+      "mae": 108.45,
+      "rmse": 237.42,
+      "r2": 0.6819,
+      "medae": 54.83,
+      "wape": 41.18
+    },
+    "test": {
+      "mae": 93.57,
+      "rmse": 156.18,
+      "r2": 0.6812,
+      "medae": 53.23,
+      "wape": 41.16
+    }
+  },
+  "relative_improvement_pct": {
+    "mae_reduction": -13.85,
+    "rmse_reduction": -8.87,
+    "wape_reduction": -13.83
+  },
+  "split_summary": {
+    "strategy": "chronological",
+    "train_rows": 390907,
+    "val_rows": 32820,
+    "test_rows": 32821,
+    "train_weeks": "1 to 125",
+    "val_weeks": "126 to 135",
+    "test_weeks": "136 to 145"
+  },
+  "error_analysis": {
+    "bias_summary": {
+      "mean_residual": 5.16,
+      "median_residual": -6.72,
+      "std_residual": 156.09,
+      "underpredicted_count": 15040,
+      "underpredicted_pct": 45.82,
+      "overpredicted_count": 17781,
+      "overpredicted_pct": 54.18,
+      "exact_count": 0
+    },
+    "demand_tiers": {
+      "low_demand_under_100": {
+        "count": 13874,
+        "mae": 45.12,
+        "wape": 93.81
+      },
+      "medium_demand_100_to_500": {
+        "count": 15088,
+        "mae": 92.21,
+        "wape": 38.53
+      },
+      "high_demand_above_500": {
+        "count": 3859,
+        "mae": 273.04,
+        "wape": 33.11
+      }
+    },
+    "worst_predictions": [
+      {
+        "actual": 3631.0,
+        "predicted": 1283.4,
+        "absolute_error": 2347.6,
+        "residual": 2347.6,
+        "center_id": 13,
+        "meal_id": 1885,
+        "week": 140,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 150.38
+      },
+      {
+        "actual": 82.0,
+        "predicted": 1765.2,
+        "absolute_error": 1683.2,
+        "residual": -1683.2,
+        "center_id": 43,
+        "meal_id": 2306,
+        "week": 140,
+        "category": "Pasta",
+        "cuisine": "Italian",
+        "checkout_price": 194.0
+      },
+      {
+        "actual": 2443.0,
+        "predicted": 865.7,
+        "absolute_error": 1577.3,
+        "residual": 1577.3,
+        "center_id": 52,
+        "meal_id": 1885,
+        "week": 142,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 150.41
+      },
+      {
+        "actual": 2174.0,
+        "predicted": 643.9,
+        "absolute_error": 1530.1,
+        "residual": 1530.1,
+        "center_id": 89,
+        "meal_id": 1962,
+        "week": 141,
+        "category": "Pizza",
+        "cuisine": "Continental",
+        "checkout_price": 456.9
+      },
+      {
+        "actual": 2715.0,
+        "predicted": 1238.3,
+        "absolute_error": 1476.7,
+        "residual": 1476.7,
+        "center_id": 43,
+        "meal_id": 2290,
+        "week": 144,
+        "category": "Rice Bowl",
+        "cuisine": "Indian",
+        "checkout_price": 291.97
+      },
+      {
+        "actual": 2321.0,
+        "predicted": 869.5,
+        "absolute_error": 1451.5,
+        "residual": 1451.5,
+        "center_id": 10,
+        "meal_id": 1885,
+        "week": 140,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 150.41
+      },
+      {
+        "actual": 2133.0,
+        "predicted": 689.7,
+        "absolute_error": 1443.3,
+        "residual": 1443.3,
+        "center_id": 52,
+        "meal_id": 1885,
+        "week": 145,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 157.14
+      },
+      {
+        "actual": 2133.0,
+        "predicted": 697.1,
+        "absolute_error": 1435.9,
+        "residual": 1435.9,
+        "center_id": 67,
+        "meal_id": 1885,
+        "week": 145,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 157.14
+      },
+      {
+        "actual": 3012.0,
+        "predicted": 1594.8,
+        "absolute_error": 1417.2,
+        "residual": 1417.2,
+        "center_id": 13,
+        "meal_id": 1885,
+        "week": 141,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 151.38
+      },
+      {
+        "actual": 1890.0,
+        "predicted": 502.4,
+        "absolute_error": 1387.6,
+        "residual": 1387.6,
+        "center_id": 24,
+        "meal_id": 1885,
+        "week": 145,
+        "category": "Beverages",
+        "cuisine": "Thai",
+        "checkout_price": 159.11
+      }
+    ]
+  },
+  "saved_plots": {
+    "actual_vs_predicted": "D:\\Restaurant-Order-Demand-Prediction\\reports\\figures\\candidate_hgb_actual_vs_predicted.png",
+    "residuals_distribution": "D:\\Restaurant-Order-Demand-Prediction\\reports\\figures\\candidate_hgb_residuals_distribution.png"
+  }
+}

@@ -1,0 +1,42 @@
+# Data Configuration for Restaurant Order Demand Prediction
+data:
+  raw:
+    train_path: "data/raw/train.csv"
+    center_path: "data/raw/fulfilment_center_info.csv"
+    meal_path: "data/raw/meal_info.csv"
+  interim:
+    merged_path: "data/interim/merged_data.csv"
+  processed:
+    train_path: "data/processed/train.csv"
+    val_path: "data/processed/val.csv"
+    test_path: "data/processed/test.csv"
+  
+  target_column: "num_orders"
+  id_column: "id"
+  temporal_column: "week"
+  
+  split:
+    strategy: "chronological"
+    train_week_max: 125
+    val_week_max: 135
+    test_week_max: 145
+
+  features:
+    numerical:
+      - "checkout_price"
+      - "base_price"
+      - "discount_amount"
+      - "discount_ratio"
+      - "op_area"
+    categorical:
+      - "center_type"
+      - "category"
+      - "cuisine"
+      - "city_code"
+      - "region_code"
+    binary:
+      - "emailer_for_promotion"
+      - "homepage_featured"
+    identifiers:
+      - "center_id"
+      - "meal_id"
